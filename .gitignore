@@ -1,0 +1,13 @@
+# Answer outputs (local per machine)
+bulk-interview/answers/*.json
+bulk-interview/answers/*.md
+!bulk-interview/answers/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

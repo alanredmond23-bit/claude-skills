@@ -1,0 +1,230 @@
+{
+  "title": "Drive Organization Interview",
+  "description": "30 questions to align on the digital estate file organization project. Covers indexes, dedup strategy, source of truth, Supabase upload, legal priorities, and automation preferences.",
+  "sections": [
+    {
+      "name": "Indexes & Dedup",
+      "questions": [
+        {
+          "id": "idx_01",
+          "text": "Are the 10 index spreadsheets in 03_DATA/ALL INDEXES ON ALL LOCATIONS the ONLY indexes?",
+          "type": "choice",
+          "options": ["Yes, that's all of them", "There are others I haven't added", "Not sure, need to check"],
+          "required": true
+        },
+        {
+          "id": "idx_02",
+          "text": "Do any of the existing indexes include file checksums or hashes?",
+          "type": "choice",
+          "options": ["Yes, some have checksums", "No, just filename + size + date", "Not sure"],
+          "required": true
+        },
+        {
+          "id": "idx_03",
+          "text": "What should happen to confirmed duplicate files?",
+          "type": "choice",
+          "options": ["Flag in report only (no moves)", "Move dupes to 99_ARCHIVE folder", "Delete after confirmation", "Keep all copies for now"],
+          "required": true
+        },
+        {
+          "id": "idx_04",
+          "text": "When duplicates exist across multiple sources, which copy should be the keeper?",
+          "type": "choice",
+          "options": ["Always prefer OneDrive version", "Prefer most recent modification date", "Prefer largest file size", "Let me decide case-by-case"],
+          "required": true
+        },
+        {
+          "id": "idx_05",
+          "text": "Should near-duplicates (same name, different size) be flagged too?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "idx_06",
+          "text": "Any additional context on your dedup strategy or special files to protect?",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Source of Truth",
+      "questions": [
+        {
+          "id": "sot_01",
+          "text": "Is OneDrive DOMAINS (~/DOMAINS/) confirmed as the current staging area for organized files?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "sot_02",
+          "text": "Are there files on BIGRED (external drive) that MUST be copied to OneDrive before anything else?",
+          "type": "choice",
+          "options": ["Yes, critical files need copying first", "No, upload directly from indexes", "Not sure, need to check BIGRED"],
+          "required": true
+        },
+        {
+          "id": "sot_03",
+          "text": "Is the FIVE9 COMBINED folder (141GB in iCloud) being migrated or left in place?",
+          "type": "choice",
+          "options": ["Leave in iCloud, just index it", "Migrate critical files to OneDrive", "Full migration to OneDrive", "Archive to Supabase S3 only"],
+          "required": true
+        },
+        {
+          "id": "sot_04",
+          "text": "Should Google Drive files be pulled down to OneDrive or kept in Google Drive?",
+          "type": "choice",
+          "options": ["Pull everything to OneDrive", "Keep in Google Drive, just index", "Pull only legal/financial docs", "Already migrated"],
+          "required": true
+        },
+        {
+          "id": "sot_05",
+          "text": "Are the 2 SSDs currently accessible or still detached?",
+          "type": "choice",
+          "options": ["Both attached and accessible", "One attached, one not", "Both detached", "Already indexed, data is elsewhere"],
+          "required": true
+        },
+        {
+          "id": "sot_06",
+          "text": "Do any machines (WORKHORSE, ADMIN, QUICKS) have unique files not in any cloud sync?",
+          "type": "choice",
+          "options": ["Yes, each has unique local files", "Only WORKHORSE has extras", "Everything is synced to cloud already", "Not sure"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Supabase & Storage",
+      "questions": [
+        {
+          "id": "sup_01",
+          "text": "Is the Supabase project (fifybuzwfaegloijrmqb) ready for storage bucket creation?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "sup_02",
+          "text": "Should Supabase buckets be public or private?",
+          "type": "choice",
+          "options": ["All private (authenticated access only)", "Legal = private, others = public", "All public for easy sharing", "Mixed - decide per bucket"],
+          "required": true
+        },
+        {
+          "id": "sup_03",
+          "text": "Preferred bucket structure - one bucket per domain or fewer large buckets?",
+          "type": "choice",
+          "options": ["One per domain (legal-discovery, finance, etc.)", "Three buckets: legal, business, personal", "One big bucket with folder structure", "Match the plan exactly (7 buckets)"],
+          "required": true
+        },
+        {
+          "id": "sup_04",
+          "text": "Upload priority - which files go to Supabase first?",
+          "type": "choice",
+          "options": ["Legal/discovery documents first", "Financial records first", "Everything in parallel", "Smallest files first for quick wins"],
+          "required": true
+        },
+        {
+          "id": "sup_05",
+          "text": "Do you need Supabase SQL index tables queryable from Claude Code?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "sup_06",
+          "text": "Any Supabase storage limits or cost concerns to be aware of?",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Legal & Discovery Priority",
+      "questions": [
+        {
+          "id": "leg_01",
+          "text": "Is US v. Redmond 24-cr-376 the primary legal case driving urgency?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "leg_02",
+          "text": "Are the 696K Everlaw discovery files the main dataset for federal case analysis?",
+          "type": "choice",
+          "options": ["Yes, that's the primary dataset", "Yes but there are also SSD files to reconcile", "Everlaw is one of several sources", "Not sure of the exact count"],
+          "required": true
+        },
+        {
+          "id": "leg_03",
+          "text": "What format are the Everlaw discovery exports in?",
+          "type": "choice",
+          "options": ["PDF documents", "Mixed formats (PDF, email, images)", "Native format exports", "Not sure"],
+          "required": true
+        },
+        {
+          "id": "leg_04",
+          "text": "Are there specific date ranges, people, or entities to prioritize in document search?",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "leg_05",
+          "text": "Is there a civil litigation running alongside the federal case?",
+          "type": "choice",
+          "options": ["Yes, active civil case too", "Civil case is separate/paused", "No civil litigation", "Multiple civil matters"],
+          "required": true
+        },
+        {
+          "id": "leg_06",
+          "text": "Should legal documents be tagged with case numbers in the index?",
+          "type": "yesno",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Email & Communications",
+      "questions": [
+        {
+          "id": "eml_01",
+          "text": "Are Gmail mbox exports already downloaded and ready to parse?",
+          "type": "choice",
+          "options": ["Yes, ready to go", "Partially downloaded", "Need to export still", "Already parsed"],
+          "required": true
+        },
+        {
+          "id": "eml_02",
+          "text": "How many GoDaddy email mailboxes need extraction?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "eml_03",
+          "text": "For the reserve/holdback email search - what processors should we search for?",
+          "type": "multi",
+          "options": ["Netevia", "Stripe", "Square", "PayPal", "Other (specify in next question)"],
+          "required": true
+        },
+        {
+          "id": "eml_04",
+          "text": "Any other processors or search terms for the reserve email search?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "eml_05",
+          "text": "Should extracted emails be stored as individual files or combined archives?",
+          "type": "choice",
+          "options": ["Individual .eml files per message", "Combined mbox per account", "Both formats", "PDF conversion for legal use"],
+          "required": true
+        },
+        {
+          "id": "eml_06",
+          "text": "Date range for reserve/holdback email search?",
+          "type": "choice",
+          "options": ["All time", "2020-present", "2022-present", "Custom range (specify below)"],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

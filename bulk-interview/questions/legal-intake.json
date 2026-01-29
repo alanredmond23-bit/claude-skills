@@ -1,0 +1,157 @@
+{
+  "title": "Legal Case Intake",
+  "description": "Standard intake questionnaire for new legal cases. Covers case basics, parties, timeline, documents, and strategy.",
+  "sections": [
+    {
+      "name": "Case Basics",
+      "questions": [
+        {
+          "id": "case_01",
+          "text": "What type of case is this?",
+          "type": "choice",
+          "options": ["Federal criminal", "State criminal", "Civil litigation", "Administrative/regulatory"],
+          "required": true
+        },
+        {
+          "id": "case_02",
+          "text": "Case number (if assigned)?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "case_03",
+          "text": "Court and jurisdiction?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "case_04",
+          "text": "Current stage of proceedings?",
+          "type": "choice",
+          "options": ["Pre-indictment/investigation", "Arraignment/initial appearance", "Discovery phase", "Pre-trial motions", "Trial preparation", "Post-trial/appeal"],
+          "required": true
+        },
+        {
+          "id": "case_05",
+          "text": "Brief description of charges or claims?",
+          "type": "textarea",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Parties & Counsel",
+      "questions": [
+        {
+          "id": "party_01",
+          "text": "Who is the defendant/respondent?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "party_02",
+          "text": "Who is the plaintiff/prosecutor?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "party_03",
+          "text": "Defense counsel (name and firm)?",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "party_04",
+          "text": "Any co-defendants or related parties?",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Key Dates & Timeline",
+      "questions": [
+        {
+          "id": "date_01",
+          "text": "Date of incident/arrest/filing?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "date_02",
+          "text": "Next court date or deadline?",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "date_03",
+          "text": "Are there any urgent deadlines within the next 30 days?",
+          "type": "yesno",
+          "required": true
+        },
+        {
+          "id": "date_04",
+          "text": "If yes, describe the urgent deadlines:",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Documents & Evidence",
+      "questions": [
+        {
+          "id": "doc_01",
+          "text": "What document sources are available?",
+          "type": "multi",
+          "options": ["Discovery production", "Personal files", "Email archives", "Financial records", "Photos/media"],
+          "required": true
+        },
+        {
+          "id": "doc_02",
+          "text": "Approximate volume of documents?",
+          "type": "choice",
+          "options": ["Under 1,000 pages", "1,000 - 10,000 pages", "10,000 - 100,000 pages", "Over 100,000 pages"],
+          "required": true
+        },
+        {
+          "id": "doc_03",
+          "text": "Are documents in a review platform (Everlaw, Relativity, etc.)?",
+          "type": "choice",
+          "options": ["Yes - Everlaw", "Yes - Relativity", "Yes - other platform", "No - raw files only"],
+          "required": true
+        },
+        {
+          "id": "doc_04",
+          "text": "Key documents or evidence you want analyzed first?",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Strategy & Priorities",
+      "questions": [
+        {
+          "id": "strat_01",
+          "text": "What is the primary goal for this engagement?",
+          "type": "choice",
+          "options": ["Document review and analysis", "Motion drafting", "Discovery management", "Trial preparation", "Full case support"],
+          "required": true
+        },
+        {
+          "id": "strat_02",
+          "text": "Are there specific legal theories or defenses to explore?",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "id": "strat_03",
+          "text": "Any topics or areas that are off-limits or privileged?",
+          "type": "textarea",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
