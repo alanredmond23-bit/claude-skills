@@ -1,0 +1,44 @@
+{
+  "goals": {
+    "G1": {
+      "name": "Bankruptcy Resolution",
+      "priority": "CRITICAL",
+      "domain": "LEGAL",
+      "success_metrics": ["Case dismissed", "Favorable settlement", "Debt restructured"],
+      "deadline": "Active",
+      "zone": "RED"
+    },
+    "G2": {
+      "name": "Federal Charges Defense",
+      "priority": "CRITICAL",
+      "domain": "LEGAL",
+      "success_metrics": ["Charges dropped", "Not guilty verdict", "Minimal sentencing"],
+      "deadline": "Active",
+      "zone": "RED"
+    },
+    "G3": {
+      "name": "Custody Resolution",
+      "priority": "CRITICAL",
+      "domain": "LEGAL",
+      "success_metrics": ["Custody agreement", "Visitation rights", "Child welfare"],
+      "deadline": "Active",
+      "zone": "RED"
+    },
+    "G4": {
+      "name": "Family Harmony",
+      "priority": "HIGH",
+      "domain": "FAMILY",
+      "success_metrics": ["Quality time", "Communication", "Relationship health"],
+      "deadline": "Ongoing",
+      "zone": "GREEN"
+    },
+    "G5": {
+      "name": "$500K/month Revenue",
+      "priority": "HIGH",
+      "domain": "BUSINESS",
+      "success_metrics": ["MRR growth", "Customer acquisition", "Unit economics"],
+      "deadline": "2026-12-31",
+      "zone": "GREEN"
+    }
+  }
+}

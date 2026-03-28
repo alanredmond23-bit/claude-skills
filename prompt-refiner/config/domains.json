@@ -1,0 +1,111 @@
+{
+  "domains": {
+    "LEGAL": {
+      "triggers": ["motion", "filing", "court", "judge", "attorney", "lawsuit", "evidence", "discovery", "deposition", "statute", "precedent", "plaintiff", "defendant", "bankruptcy", "custody", "federal", "charges", "indictment"],
+      "subdomains": {
+        "litigation": ["motion", "filing", "discovery", "trial"],
+        "bankruptcy": ["chapter 7", "chapter 11", "chapter 13", "creditor", "debtor"],
+        "family": ["custody", "divorce", "support", "visitation"],
+        "criminal": ["charges", "indictment", "federal", "defense"]
+      },
+      "default_framework": "IRAC",
+      "default_zone": "RED",
+      "assumptions": [
+        "Court deadlines are immutable",
+        "Opposing counsel is competent",
+        "Precedent applies unless distinguished",
+        "Evidence rules vary by jurisdiction"
+      ],
+      "observations": [
+        "Federal cases require heightened scrutiny",
+        "Local rules often override general rules",
+        "Judge tendencies matter significantly"
+      ]
+    },
+    "BUSINESS": {
+      "triggers": ["revenue", "leads", "sales", "pricing", "market", "customer", "growth", "churn", "CAC", "LTV", "MRR", "ARR", "conversion", "funnel"],
+      "subdomains": {
+        "revenue": ["pricing", "sales", "conversion", "upsell"],
+        "growth": ["leads", "acquisition", "market", "expansion"],
+        "operations": ["process", "efficiency", "cost", "optimization"]
+      },
+      "default_framework": "JTBD",
+      "default_zone": "GREEN",
+      "assumptions": [
+        "Market exists for solution",
+        "Customer has budget",
+        "Product-market fit achievable",
+        "Competition is rational"
+      ],
+      "observations": [
+        "CAC/LTV varies significantly by channel",
+        "Churn compounds faster than growth",
+        "Pricing is the strongest lever"
+      ]
+    },
+    "TECHNICAL": {
+      "triggers": ["bug", "error", "code", "deploy", "API", "database", "server", "function", "test", "refactor", "performance", "security"],
+      "subdomains": {
+        "debugging": ["bug", "error", "fix", "crash"],
+        "development": ["feature", "implement", "build", "create"],
+        "infrastructure": ["deploy", "server", "database", "scale"],
+        "security": ["auth", "encryption", "vulnerability", "audit"]
+      },
+      "default_framework": "5_WHYS",
+      "default_zone": "GREEN",
+      "assumptions": [
+        "Requirements are understood",
+        "Tech stack is appropriate",
+        "Tests are expected",
+        "Documentation matters"
+      ],
+      "observations": [
+        "Edge cases break systems",
+        "Tech debt compounds exponentially",
+        "Simple > clever"
+      ]
+    },
+    "FAMILY": {
+      "triggers": ["kids", "children", "wife", "husband", "spouse", "parent", "family", "relationship", "home", "personal"],
+      "subdomains": {
+        "parenting": ["kids", "children", "school", "activities"],
+        "relationship": ["wife", "husband", "spouse", "partner"],
+        "household": ["home", "chores", "planning", "budget"]
+      },
+      "default_framework": "PERSPECTIVE",
+      "default_zone": "GREEN",
+      "assumptions": [
+        "Relationships require maintenance",
+        "Communication is key",
+        "Time is limited",
+        "Priorities compete"
+      ],
+      "observations": [
+        "Quality time > quantity",
+        "Consistency builds trust",
+        "Small gestures compound"
+      ]
+    },
+    "RESEARCH": {
+      "triggers": ["research", "analyze", "compare", "evaluate", "study", "investigate", "explore", "understand"],
+      "subdomains": {
+        "competitive": ["compare", "competitor", "market", "landscape"],
+        "technical": ["evaluate", "benchmark", "assess", "review"],
+        "strategic": ["explore", "opportunity", "trend", "future"]
+      },
+      "default_framework": "MECE",
+      "default_zone": "GREEN",
+      "assumptions": [
+        "Data is available",
+        "Sources are reliable",
+        "Scope is defined",
+        "Time permits depth"
+      ],
+      "observations": [
+        "Primary sources > secondary",
+        "Recent data > historical",
+        "Multiple sources > single"
+      ]
+    }
+  }
+}

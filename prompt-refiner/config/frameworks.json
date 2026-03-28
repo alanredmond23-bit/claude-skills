@@ -1,0 +1,132 @@
+{
+  "frameworks": {
+    "IRAC": {
+      "name": "Issue-Rule-Application-Conclusion",
+      "best_for": ["legal_analysis", "case_briefing", "legal_arguments"],
+      "structure": "Issue → Rule → Application → Conclusion",
+      "goal_fit": ["G1", "G2", "G3"],
+      "complexity": "medium",
+      "time_blocks": ["10min", "30min", "1hr"]
+    },
+    "MECE": {
+      "name": "Mutually Exclusive, Collectively Exhaustive",
+      "best_for": ["decomposition", "categorization", "analysis"],
+      "structure": "Break into non-overlapping, complete categories",
+      "goal_fit": ["G1", "G2", "G5"],
+      "complexity": "medium",
+      "time_blocks": ["5min", "10min", "30min"]
+    },
+    "OODA": {
+      "name": "Observe-Orient-Decide-Act",
+      "best_for": ["rapid_decisions", "crisis_response", "tactical"],
+      "structure": "Observe → Orient → Decide → Act",
+      "goal_fit": ["G3", "G5"],
+      "complexity": "low",
+      "time_blocks": ["1min", "5min", "10min"]
+    },
+    "5_WHYS": {
+      "name": "Five Whys Root Cause Analysis",
+      "best_for": ["debugging", "root_cause", "problem_solving"],
+      "structure": "Why? (5x) → Root Cause → Solution",
+      "goal_fit": ["G4", "G5"],
+      "complexity": "low",
+      "time_blocks": ["5min", "10min"]
+    },
+    "JTBD": {
+      "name": "Jobs-to-be-Done",
+      "best_for": ["customer_insight", "product_strategy", "revenue"],
+      "structure": "When [situation], I want to [job], so I can [outcome]",
+      "goal_fit": ["G5"],
+      "complexity": "medium",
+      "time_blocks": ["10min", "30min"]
+    },
+    "PRE_MORTEM": {
+      "name": "Pre-Mortem Analysis",
+      "best_for": ["risk_assessment", "failure_prevention", "planning"],
+      "structure": "Assume failure → Identify causes → Prevent",
+      "goal_fit": ["G1", "G2", "G3", "G5"],
+      "complexity": "medium",
+      "time_blocks": ["10min", "30min"]
+    },
+    "WARDLEY": {
+      "name": "Wardley Mapping",
+      "best_for": ["strategic_positioning", "market_analysis", "evolution"],
+      "structure": "Value Chain → Evolution Stage → Strategy",
+      "goal_fit": ["G5"],
+      "complexity": "high",
+      "time_blocks": ["30min", "1hr"]
+    },
+    "COT": {
+      "name": "Chain of Thought",
+      "best_for": ["complex_reasoning", "multi_step", "derivation"],
+      "structure": "Step 1 → Step 2 → ... → Conclusion",
+      "goal_fit": ["G2", "G5"],
+      "complexity": "medium",
+      "time_blocks": ["5min", "10min", "30min"]
+    },
+    "PERSPECTIVE": {
+      "name": "Multi-Perspective Analysis",
+      "best_for": ["relationships", "conflicts", "empathy"],
+      "structure": "Your view → Their view → Shared view → Action",
+      "goal_fit": ["G4"],
+      "complexity": "low",
+      "time_blocks": ["5min", "10min"]
+    },
+    "FIRST_PRINCIPLES": {
+      "name": "First Principles Thinking",
+      "best_for": ["challenging_assumptions", "innovation", "pricing"],
+      "structure": "Assumption → Fundamental truth → Rebuild",
+      "goal_fit": ["G2", "G5"],
+      "complexity": "high",
+      "time_blocks": ["30min", "1hr"]
+    },
+    "INVERSION": {
+      "name": "Inversion",
+      "best_for": ["risk_mitigation", "avoiding_mistakes", "defense"],
+      "structure": "How to fail → Invert → How to succeed",
+      "goal_fit": ["G1", "G2", "G3"],
+      "complexity": "low",
+      "time_blocks": ["5min", "10min"]
+    },
+    "RED_TEAM": {
+      "name": "Red Team / Blue Team",
+      "best_for": ["adversarial_testing", "prosecution_anticipation", "security"],
+      "structure": "Attack (red) → Defend (blue) → Iterate",
+      "goal_fit": ["G2"],
+      "complexity": "high",
+      "time_blocks": ["30min", "1hr"]
+    },
+    "SCAMPER": {
+      "name": "SCAMPER Innovation",
+      "best_for": ["product_innovation", "feature_ideation", "creativity"],
+      "structure": "Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Reverse",
+      "goal_fit": ["G5"],
+      "complexity": "medium",
+      "time_blocks": ["10min", "30min"]
+    },
+    "EISENHOWER": {
+      "name": "Eisenhower Matrix",
+      "best_for": ["prioritization", "time_management", "triage"],
+      "structure": "Urgent/Important → Quadrant → Action",
+      "goal_fit": ["G1", "G2", "G3", "G4", "G5"],
+      "complexity": "low",
+      "time_blocks": ["1min", "5min"]
+    },
+    "PDCA": {
+      "name": "Plan-Do-Check-Act",
+      "best_for": ["process_improvement", "iteration", "ops"],
+      "structure": "Plan → Do → Check → Act → Repeat",
+      "goal_fit": ["G5"],
+      "complexity": "low",
+      "time_blocks": ["5min", "10min"]
+    },
+    "TOC": {
+      "name": "Theory of Constraints",
+      "best_for": ["bottleneck_elimination", "scaling", "optimization"],
+      "structure": "Identify constraint → Exploit → Subordinate → Elevate",
+      "goal_fit": ["G5"],
+      "complexity": "medium",
+      "time_blocks": ["10min", "30min"]
+    }
+  }
+}
